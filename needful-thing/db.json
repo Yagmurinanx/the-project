@@ -1,0 +1,198 @@
+{
+  "clothingItems": [
+    {
+      "id": 1,
+      "name": "Vintage Denim Jacket",
+      "description": "A classic denim jacket with a distressed look, perfect for casual wear.",
+      "category": "Jackets",
+      "material": "Denim",
+      "color": "Blue",
+      "size": "M",
+      "condition": "Used",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 2,
+      "name": "Floral Maxi Dress",
+      "description": "An elegant maxi dress featuring a floral pattern and flowing design.",
+      "category": "Dresses",
+      "material": "Chiffon",
+      "color": "Multicolor",
+      "size": "S",
+      "condition": "New with tags",
+      "price": 79.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 3,
+      "name": "Vintage Fedora Hat",
+      "description": "A stylish fedora hat with a classic design, suitable for any occasion.",
+      "category": "Accessories",
+      "material": "Wool",
+      "color": "Black",
+      "size": "One Size",
+      "condition": "Pre-owned",
+      "price": 29.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 4,
+      "name": "Vintage Leather Jacket",
+      "description": "A timeless leather jacket with a rugged look, perfect for colder seasons.",
+      "category": "Jackets",
+      "material": "Leather",
+      "color": "Brown",
+      "size": "L",
+      "condition": "Used",
+      "price": 129.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 5,
+      "name": "Striped Oxford Shirt",
+      "description": "A classic striped shirt suitable for both casual and formal occasions.",
+      "category": "Shirts",
+      "material": "Cotton",
+      "color": "Blue/White",
+      "size": "M",
+      "condition": "New",
+      "price": 39.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 6,
+      "name": "Vintage Fedora Hat",
+      "description": "A stylish fedora hat with a classic design, suitable for any occasion.",
+      "category": "Accessories",
+      "material": "Wool",
+      "color": "Black",
+      "size": "One Size",
+      "condition": "Pre-owned",
+      "price": 29.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 7,
+      "name": "Vintage Pleated Skirt",
+      "description": "A chic pleated skirt that adds a touch of elegance to any outfit.",
+      "category": "Skirts",
+      "material": "Polyester",
+      "color": "Black",
+      "size": "S",
+      "condition": "Like New",
+      "price": 49.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 8,
+      "name": "Retro High-Top Sneakers",
+      "description": "Classic high-top sneakers with a retro design, ideal for casual wear.",
+      "category": "Shoes",
+      "material": "Canvas",
+      "color": "Red/White",
+      "size": "US 8",
+      "condition": "New with box",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 9,
+      "name": "Vintage Wool Coat",
+      "description": "An exquisite wool coat that provides warmth and style during colder seasons.",
+      "category": "Coats",
+      "material": "Wool Blend",
+      "color": "Gray",
+      "size": "M",
+      "condition": "Gently Used",
+      "price": 89.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 10,
+      "name": "Vintage Fedora Hat",
+      "description": "A stylish fedora hat with a classic design, suitable for any occasion.",
+      "category": "Accessories",
+      "material": "Wool",
+      "color": "Black",
+      "size": "One Size",
+      "condition": "Pre-owned",
+      "price": 29.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 11,
+      "name": "Vintage Denim Jacket",
+      "description": "A classic denim jacket that never goes out of style.",
+      "category": "Jackets",
+      "material": "Denim",
+      "color": "Blue",
+      "size": "XL",
+      "condition": "Pre-owned",
+      "price": 79.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 12,
+      "name": "Polka Dot Midi Dress",
+      "description": "A charming midi dress adorned with polka dots, perfect for a casual day out.",
+      "category": "Dresses",
+      "material": "Cotton",
+      "color": "Navy/White",
+      "size": "L",
+      "condition": "New",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 13,
+      "name": "Vintage Flannel Shirt",
+      "description": "A cozy flannel shirt with a vintage appeal, suitable for everyday wear.",
+      "category": "Shirts",
+      "material": "Flannel",
+      "color": "Red/Black",
+      "size": "M",
+      "condition": "Used",
+      "price": 34.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 14,
+      "name": "Vintage Leather Satchel",
+      "description": "A stylish leather satchel perfect for carrying essentials in a fashionable way.",
+      "category": "Bags",
+      "material": "Leather",
+      "color": "Brown",
+      "size": "One Size",
+      "condition": "Gently Used",
+      "price": 119.99,
+      "image": "https://picsum.photos/200/300"
+    }
+  ],
+  "chartItems": [
+    {
+      "id": 1,
+      "name": "Vintage Denim Jacket",
+      "description": "A classic denim jacket with a distressed look, perfect for casual wear.",
+      "category": "Jackets",
+      "material": "Denim",
+      "color": "Blue",
+      "size": "M",
+      "condition": "Used",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 2,
+      "name": "Floral Maxi Dress",
+      "description": "An elegant maxi dress featuring a floral pattern and flowing design.",
+      "category": "Dresses",
+      "material": "Chiffon",
+      "color": "Multicolor",
+      "size": "S",
+      "condition": "New with tags",
+      "price": 79.99,
+      "image": "https://picsum.photos/200/300"
+    }
+  ]
+}

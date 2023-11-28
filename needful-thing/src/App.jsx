@@ -1,16 +1,11 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import store from './Redux/store';
-import './App.css'
-import { createApi } from '@reduxjs/toolkit/query'
-import { createApi as createApiReact } from '@reduxjs/toolkit/query/react';
 import { createRoot } from 'react-dom/client';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage'
-import Chart from './pages/Chart';
+import Cart from './pages/Cart';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -34,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/chart" element={<Chart />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   </Router>

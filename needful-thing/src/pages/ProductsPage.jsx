@@ -1,9 +1,9 @@
 import React from 'react'
-import ClothingComponent from '../components/clohting'
+import ClothesComponent from '../components/ClothesComponent'
 
 const ProductsPage = () => {
   return (
-    <div><ClothingComponent/></div>
+    <div><ClothesComponent/></div>
   )
 }
 

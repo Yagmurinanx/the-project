@@ -169,7 +169,7 @@
       "image": "https://picsum.photos/200/300"
     }
   ],
-  "chartItems": [
+  "cartItems": [
     {
       "id": 1,
       "name": "Vintage Denim Jacket",
@@ -183,15 +183,53 @@
       "image": "https://picsum.photos/200/300"
     },
     {
-      "id": 2,
-      "name": "Floral Maxi Dress",
-      "description": "An elegant maxi dress featuring a floral pattern and flowing design.",
-      "category": "Dresses",
-      "material": "Chiffon",
-      "color": "Multicolor",
-      "size": "S",
-      "condition": "New with tags",
-      "price": 79.99,
+      "id": 8,
+      "name": "Retro High-Top Sneakers",
+      "description": "Classic high-top sneakers with a retro design, ideal for casual wear.",
+      "category": "Shoes",
+      "material": "Canvas",
+      "color": "Red/White",
+      "size": "US 8",
+      "condition": "New with box",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "name": "Vintage Denim Jacket",
+      "description": "A classic denim jacket with a distressed look, perfect for casual wear.",
+      "category": "Jackets",
+      "material": "Denim",
+      "color": "Blue",
+      "size": "M",
+      "condition": "Used",
+      "price": 59.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 3,
+      "name": "Vintage Fedora Hat",
+      "description": "A stylish fedora hat with a classic design, suitable for any occasion.",
+      "category": "Accessories",
+      "material": "Wool",
+      "color": "Black",
+      "size": "One Size",
+      "condition": "Pre-owned",
+      "price": 29.99,
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 8,
+      "name": "Retro High-Top Sneakers",
+      "description": "Classic high-top sneakers with a retro design, ideal for casual wear.",
+      "category": "Shoes",
+      "material": "Canvas",
+      "color": "Red/White",
+      "size": "US 8",
+      "condition": "New with box",
+      "price": 59.99,
       "image": "https://picsum.photos/200/300"
     }
   ]

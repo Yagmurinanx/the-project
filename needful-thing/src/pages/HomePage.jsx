@@ -1,10 +1,10 @@
 import React from 'react'
-import ClothingComponent from '../components/clohting'
+import ClothesComponent from '../components/ClothesComponent'
 
 const HomePage = () => {
   return (
     <div>
-      <ClothingComponent/>
+      <ClothesComponent/>
     </div>
   )
 }

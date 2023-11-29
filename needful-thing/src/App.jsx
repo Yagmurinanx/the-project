@@ -6,6 +6,7 @@ import { createRoot } from 'react-dom/client';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage'
 import Cart from './pages/Cart';
+import Favorites from './pages/Favorites';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/favorites" element={<Cart />} />
       </Routes>
     </div>
   </Router>

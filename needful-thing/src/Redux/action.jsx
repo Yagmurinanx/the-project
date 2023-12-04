@@ -47,17 +47,4 @@ export const addToCart = (clothes) => {
   };
 };
 
-// export const sendToCart = (clothes) => {
-//   return async (dispatch) => {
-//     try {
-//       await axios.post('http://localhost:3001/cartItems', clothes);
-//       dispatch(addToCart(clothes));
-//     } catch (error) {
-//       console.error('There was a problem sending item to cart:', error);
-//       // Hata durumunda UI'nin ele alması için hatayı yeniden fırlatın
-//       throw error;
-//     }
-//   };
-// };
-
 

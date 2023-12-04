@@ -1,12 +1,10 @@
-import React from 'react';
-import ClothestList from '../components/ClothesList';
+import React from 'react'; 
+import Cart from '../components/Cart';
 
 const CartPage = () => {
   return (
-    <div>
-      <h1>Cart Page</h1>
-      <ClothestList/>
-    
+    <div className='flex'>
+    <Cart/>
     </div>
   );
 };

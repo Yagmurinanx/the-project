@@ -6,26 +6,43 @@ import { useState } from 'react';
 const ClothesDetail = ({ clothes }) => {
   const dispatch = useDispatch();
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isCart, setIsCart] = useState(false);
 
-  const handleAddToCart = async (clothes) => {
+  const handleAddToCart = async (selectedClothes) => {
     try {
-      await dispatch(sendToCart(clothes));
+      if(isCart){
+        await dispatch(sendToCart(selectedClothes,'remove'));
+        console.log('Item removed from Cart:', selectedClothes);
+        setIsCart(false);
+      } else {
+        await dispatch(sendToCart(selectedClothes,'add'));
+        console.log('Item addet to Cart');
+        setIsCart(true);
+      }
     } catch (error) {
-      console.error('There was a problem sending item to cart:', error);
+      console.error('There was a problem sending item to cart', error);
     }
   };
 
-  const handleAddToFavorites = async (clothes) => {
-    setIsFavorite(!isFavorite);
+  const handleAddToFavorites = async (selectedClothes) => {
     try {
-      await dispatch(sendToFavorites(clothes));
+      if (isFavorite) {
+        await dispatch(sendToFavorites(selectedClothes, 'remove'));
+        console.log('Item removed from Favorites:', selectedClothes);
+        // Favoriden kaldırıldığında setIsFavorite(false) ile favori durumunu güncelle
+        setIsFavorite(false);
+      } else {
+        await dispatch(sendToFavorites(selectedClothes, 'add'));
+        console.log('Item added to Favorites:', selectedClothes);
+        // Favoriye eklendiğinde setIsFavorite(true) ile favori durumunu güncelle
+        setIsFavorite(true);
+      }
     } catch (error) {
       console.error('There was a problem sending item to favorites:', error);
     }
   };
-
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div key={clothes.id} className="card w-96 bg-base-100 shadow-xl flex">
       <img src={clothes.image} alt={clothes.name} className="p-8 rounded-t-lg" />
       <div className='card-body'>
         <p className="card-title">{clothes.name}</p>
@@ -48,3 +65,13 @@ const ClothesDetail = ({ clothes }) => {
 };
 
 export default ClothesDetail;
+
+
+// const handleAddToCart = async (selectedClothes) => {
+//   try {
+//     await dispatch(sendToCart(selectedClothes));
+//     console.log('Item added to Cart:', selectedClothes);
+//   } catch (error) {
+//     console.error('There was a problem sending item to cart:', error);
+//   }
+// };

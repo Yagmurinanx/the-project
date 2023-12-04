@@ -1,12 +1,18 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore, createSlice, getDefaultMiddleware } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk'; 
 import { addToCart } from './action';
+import favoriteReducer from '../Features/favoritesSlice';
+import productsReducer from '../Features/productSlice'
 
 const initialState = {
   clothingItems: [],
   cartItems: [],
   favorites: [],
+  
 };
 
+
+const middleware = [...getDefaultMiddleware(), thunk];
 const clothingSlice = createSlice({
   name: 'clothing',
   initialState,
@@ -16,6 +22,9 @@ const clothingSlice = createSlice({
     },
     addToFavorites(state, action) {
       state.favorites.push(action.payload);
+    },
+    removeFromFavorites(state, action) {
+      state.favorites = state.favorites.filter(clothes => clothes.id !== action.payload.id);
     },
   },
 });
@@ -32,11 +41,18 @@ export const cartReducer = (state = initialState, action) => {
   }
 };
 
-export const { addItem, addToFavorites } = clothingSlice.actions;
-
-export default configureStore({
+const store = configureStore({
   reducer: {
+    favorites: favoriteReducer,
     clothing: clothingSlice.reducer,
     cart: cartReducer,
+    products: productsReducer
   },
+  middleware,
 });
+
+export default store;
+
+export const { addItem, addToFavorites, removeFromFavorites } = clothingSlice.actions;
+
+

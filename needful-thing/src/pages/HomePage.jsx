@@ -1,10 +1,11 @@
 import React from 'react'
-import ClothesComponent from '../components/ClothesComponent'
+import Products from './Products'
+
 
 const HomePage = () => {
   return (
     <div>
-      <ClothesComponent/>
+      <Products/>
     </div>
   )
 }

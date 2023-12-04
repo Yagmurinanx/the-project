@@ -13,8 +13,11 @@ const Navbar = () => {
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>
         </li>
         <li>
-          <Link to="/products" className="text-white hover:text-gray-300">Products</Link>
+          <Link to="/product" className="text-white hover:text-gray-300">Products</Link>
         </li>
+        {/* <li>
+          <Link to="/products" className="text-white hover:text-gray-300">Products</Link>
+        </li> */}
         <li className="relative">
           <Link to="/cart" className="text-white hover:text-gray-300">Cart</Link>
           <div className="absolute top-full left-0 w-48 bg-white shadow-md py-2 invisible opacity-0 transition duration-300 z-10">
@@ -23,11 +26,7 @@ const Navbar = () => {
           </div>
         </li>
         <li className="relative">
-          <Link to="/favorites" className="text-white hover:text-gray-300">Favorites</Link>
-          <div className="absolute top-full left-0 w-48 bg-white shadow-md py-2 invisible opacity-0 transition duration-300 z-10">
-            <Link to="/favorites" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">View Favorites</Link>
-            {/* Other dropdown items related to favorites */}
-          </div>
+        <Link to="/favoritesPage" className="text-white hover:text-gray-300">Favorites</Link>
         </li>
       </ul>
     </nav>

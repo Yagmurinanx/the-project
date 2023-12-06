@@ -2,7 +2,7 @@
   "clothingItems": [
     {
       "id": 1,
-      "name": "Vintage Denim Jacket",
+      "name": "Vintage",
       "description": "A classic denim jacket with a distressed look, perfect for casual wear.",
       "category": "Jackets",
       "material": "Denim",
@@ -170,18 +170,7 @@
     }
   ],
   "cartItems": [
-    {
-      "id": 1,
-      "name": "Vintage Denim Jacket",
-      "description": "A classic denim jacket with a distressed look, perfect for casual wear.",
-      "category": "Jackets",
-      "material": "Denim",
-      "color": "Blue",
-      "size": "M",
-      "condition": "Used",
-      "price": 59.99,
-      "image": "https://picsum.photos/200/300?image=17"
-    }
+   
   ],
   "favorites": []
 }

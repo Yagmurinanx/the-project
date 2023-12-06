@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Features/productSlice';
 
@@ -41,6 +42,11 @@ const Products = () => {
                 >
                   Add to Favorites
                 </button>
+                <div className="card-actions justify-end">
+                <Link to={`/product/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline btn-accent">
+                  View Details
+                </Link>
+                </div>
               </div>
             </div>
           </div>

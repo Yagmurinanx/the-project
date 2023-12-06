@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import { addToCart } from './action';
 import favoriteReducer from '../Features/favoritesSlice';
 import productsReducer from '../Features/productSlice'
+import detailReducer from '../Features/detailSlice';
 
 const initialState = {
   clothingItems: [],
@@ -46,13 +47,24 @@ const store = configureStore({
     favorites: favoriteReducer,
     clothing: clothingSlice.reducer,
     cart: cartReducer,
-    products: productsReducer
+    products: productsReducer,
+    details: detailReducer, 
   },
-  middleware,
+  middleware: middleware,
 });
 
 export default store;
 
 export const { addItem, addToFavorites, removeFromFavorites } = clothingSlice.actions;
 
+// const store = configureStore({
+//   reducer: {
+//     favorites: favoriteReducer,
+//     clothing: clothingSlice.reducer,
+//     cart: cartReducer,
+//     products: productsReducer,
+//     details: detailReducer.reducer,
+//   },
+//   middleware,
+// });
 

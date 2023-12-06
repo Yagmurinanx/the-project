@@ -167,10 +167,16 @@
       "condition": "Gently Used",
       "price": 119.99,
       "image": "https://picsum.photos/200/300?image=14"
+    },
+    {
+      "name": "Yağmur",
+      "description": "yy",
+      "price": 0,
+      "category": "",
+      "image": "",
+      "id": 15
     }
   ],
-  "cartItems": [
-   
-  ],
+  "cartItems": [],
   "favorites": []
 }

@@ -4,10 +4,11 @@ import Navbar from './components/Navbar';
 import store from './Redux/store';
 import { createRoot } from 'react-dom/client';
 import HomePage from './pages/HomePage';
-// import ProductsPage from './pages/ProductsPage'
 import Cart from './pages/Cart';
 import FavoritesPage from './pages/FavoritesPage';
 import Products from './pages/Products';
+import ProductDetailPage from './components/ProductsDetail';
+
 
 
 const root = createRoot(document.getElementById('root'));
@@ -20,7 +21,7 @@ root.render(
   </>
 
 );
-
+/////////buradaki document kısmını çıkaredım
 function App() {
 
   return (
@@ -31,14 +32,16 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<Products />} />
-        {/* <Route path="/products" element={<ProductsPage />} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/favoritesPage" element={<FavoritesPage />} />
+        <Route path="/product/:id" element={<ProductDetailPage />} />
       </Routes>
     </div>
   </Router>
+ 
   </div>
   )
 }
 
 export default App
+//<Route path="/product/:productId" element={<ProductDetail />} />

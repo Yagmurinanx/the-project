@@ -1,12 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'custom-bg': '#1eb854', 
+      },
+      backgroundImage: {
+        'background': "url('src/assets/images/skull.jpg')",
+      },
+      colors: {
+        black: '#171212',
+        green: '#1eb854' // Özel rengi tanımlama
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require('flowbite/plugin'),
+  ],
 }
 

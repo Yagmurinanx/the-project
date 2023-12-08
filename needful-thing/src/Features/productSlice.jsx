@@ -91,13 +91,14 @@ export const productSlice = createSlice({
       })
       .addCase(addToFavoritesAsync.fulfilled, (state, action) => {
         const newItem = action.payload;
-        const isItemInFavorites = state.favoritesItems.find(item => item.id === newItem.id);
+        const isItemInFavorites = state.favoritesItems.some(item => item.id === newItem.id);
         if (!isItemInFavorites) {
           state.favoritesItems.push(newItem);
         } else {
           console.log('This item is already in favoritesItems.');
         }
-      });
+      })
+      
   },
 });
 

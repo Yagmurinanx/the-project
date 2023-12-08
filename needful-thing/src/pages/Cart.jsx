@@ -3,7 +3,7 @@ import Cart from '../components/Cart';
 
 const CartPage = () => {
   return (
-    <div className='flex'>
+    <div className='flex '>
     <Cart/>
     </div>
   );

@@ -1,15 +1,6 @@
 import axios from "axios";
 import store from "./Redux/store";
-import { addItem } from "./Redux/store";
 
-export const fetchData = async () => {
-    try {
-      const response = await axios.get("http://localhost:3001/clothingItems");
-      store.dispatch(addItem(response.data));
-    } catch (error) {
-      console.error('Error fetching data: ', error);
-    }
-  };
 
   export const fetchCart = async () => {
     try {

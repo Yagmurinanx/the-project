@@ -17,7 +17,7 @@ export const addToCartAsync = createAsyncThunk('cart/addToCart', async (favorite
     const response = await axios.post('http://localhost:3001/cartItems', favorite); // favorite yerine favorite'nin tamamını geçin
     return response.data;
   } else {
-    console.log('Bu öğe zaten cartItems içinde bulunuyor.');
+    console.log('This item already exists in cartItems.');
     return null; // Eğer öğe zaten cartItems içinde bulunuyorsa, null dönebiliriz veya istediğiniz bir değeri dönebilirsiniz.
   }
 });
@@ -85,7 +85,7 @@ export const favoriteSlice = createSlice({
         if (!isItemInCart) {
           state.cartItems.push(newItem);
         } else {
-          console.log('Bu öğe zaten cartItems içinde bulunuyor.');
+          console.log('This item already exists in cartItems.');
         }
       });
   },

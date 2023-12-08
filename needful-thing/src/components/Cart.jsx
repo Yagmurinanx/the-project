@@ -1,24 +1,27 @@
-import React, { useEffect, useState, useDispatch } from 'react';
-import { fetchCart, fetchFavorites } from '../api';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCart } from '../api';
 import axios from 'axios';
+import { sendToFavorites, deleteFromCart } from '../Redux/action';
+import CartItemSkeleton from '../components/CartItemSkeleton';
+import favorite from '../assets/icons/favorite-empty.svg';
+import deletes from '../assets/icons/delete.svg';
 
-
-//burada kaldım favorilere ekleme 
+ 
 
 const CartItems = () => {
- 
+  const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
-  const [isCart, setIsCart] = useState(false);
-  const [ favorites, setFavorites]= useState([]);
-  const [isFavorite, setIsFavorite] = useState(false);
+  // const [isCart, setIsCart] = useState(false);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const cartResponse = await fetchCart();
-        const favoritesResponse = await fetchFavorites();
         setCartItems(cartResponse); 
-        setFavorites(favoritesResponse); 
+        setLoading(false);
+        
      } catch (error) {
         console.error('Error fetching data:', error);
      }
@@ -27,50 +30,39 @@ const CartItems = () => {
     fetchData();
   }, []);
 
-  const handleAddToCart = (selectedClothes) => {
+ 
+  
+  const dispatch = useDispatch();
+  
+  const handleAddToFavorites = async (selectedItems) => {
     try {
-      const isItemInCart = cartItems.some((cartItem) => cartItem.id === selectedClothes.id);
-  
-      if (isItemInCart) {
-        // Favorilerden öğeyi kaldır
-        const updatedCart = cartItems.filter((cartItem) => cartItem.id !== selectedClothes.id);
-        setCartItems(updatedCart);
-        console.log('Item removed from Cart:', selectedClothes);
-      } else {
-        // Favorilere öğeyi ekle
-        const updatedCart = [...cartItems, selectedClothes];
-        setCartItems(updatedCart);
-        console.log('Item added to Cart:', selectedClothes);
-      }
-  
-      setIsCart(!isItemInCart); // Toggle favorite state
+      await dispatch(sendToFavorites(selectedItems));
+      console.log('Item added to Favorites:', selectedItems);
+      // Favorilere eklendiğine dair ek işlemler yapabilirsiniz
     } catch (error) {
-      console.error('Error updating Cart:', error);
+      console.error('Error adding item to Favorites:', error);
     }
   };
 
-  const handleAddToFavorites = async (selectedClothes) => {
+  const handleRemoveFromCart = async (selectedItem) => {
     try {
-      const isItemInFavorites = favorites.some((favItem) => favItem.id === selectedClothes.id);
-  
-      if (isItemInFavorites) {
-        // Favoriye eklenmişse, favorilerden kaldır
-        const updatedFavorites = favorites.filter((favItem) => favItem.id !== selectedClothes.id);
-        setFavorites(updatedFavorites);
-        console.log('Item removed from Favorites:', selectedClothes);
-      } else {
-        // Favoriye eklenmemişse, favorilere ekle
-        const updatedFavorites = [...favorites, selectedClothes];
-        setFavorites(updatedFavorites);
-        console.log('Item added to Favorites:', selectedClothes);
-      }
+      const selectedItemId = selectedItem.id;
+      await dispatch(deleteFromCart(selectedItemId)); // Doğru ID'yi deleteFromCart fonksiyonuna geçirin
+      console.log('Item removed from Cart:', selectedItemId);
+      
+      const updatedCartItems = cartItems.filter(item => item.id !== selectedItemId);
+    setCartItems(updatedCartItems);
     } catch (error) {
-      console.error('Error updating Favorites:', error);
+      console.error('Error removing item from Cart:', error);
     }
   };
+
+
   return (
-    <div className='m-5 colums-4 flex flex-wrap justify-between gap-12'>
-    {cartItems.length > 0 ? cartItems.map((cartItem) =>( (
+    <div className='m-5 colums-4 flex flex-wrap justify-between gap-12 '>
+    {loading ? (
+         <CartItemSkeleton count={9} /> ) :
+     cartItems.length > 0 ? cartItems.map((cartItem) =>( (
         <div key={cartItem.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src={cartItem?.image} alt={cartItem?.name} className="w-full rounded-t-lg" />
             <div className='p-5'>
@@ -79,20 +71,19 @@ const CartItems = () => {
                 <p className="text-gray-600">${cartItem?.price}</p>
                 </div>
                 <div className='card-actions justify-end'>
-                <button onClick={() => handleAddToCart(cartItem)} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline btn-accent">
-                Add to Cart
-                </button>
-                    <button
-                        onClick={() => handleAddToFavorites(cartItem)}
-                        className={`btn ${isFavorite ? 'favorite' : 'not-favorite'}`}
-                    >
-                        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-                    </button>
+                <button onClick={() => handleAddToFavorites(cartItem)} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                <img src={favorite} alt='svg favorite'></img>
+              </button>
+              <button onClick={() => handleRemoveFromCart(cartItem)} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
+              <img src={deletes} alt='svg delete'></img>
+            </button>
                 </div>
             </div>
         </div>
     ) )): (
-        <p>Sepetiniz Boş</p>
+        <div className="flex items-center justify-center h-screen">
+        <p className='text-center'>Your Cart is Empty</p>
+        </div>
     )}
 </div>
      

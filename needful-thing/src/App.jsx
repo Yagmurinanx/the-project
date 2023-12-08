@@ -8,7 +8,8 @@ import Cart from './pages/Cart';
 import FavoritesPage from './pages/FavoritesPage';
 import Products from './pages/Products';
 import ProductDetailPage from './components/ProductsDetail';
-
+import Footer from './components/Footer';
+import AddProduct from './pages/AddProduct';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -17,7 +18,7 @@ root.render(
   <>
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
   </>
 
 );
@@ -27,7 +28,6 @@ function App() {
   return (
     <div>
     <Router>
-    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -35,13 +35,12 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/favoritesPage" element={<FavoritesPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
+        <Route path="/addProduct" element={<AddProduct />} />
       </Routes>
-    </div>
-  </Router>
- 
+     </Router>
+    <Footer/>
   </div>
   )
 }
 
 export default App
-//<Route path="/product/:productId" element={<ProductDetail />} />

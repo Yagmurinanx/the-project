@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from "./Redux/store";
+// import store from "./Redux/store";
 
 
   export const fetchCart = async () => {

@@ -62,12 +62,12 @@ const ProductDetailPage = () => {
   if (!product) {
     return <div>No product found</div>;
   }
-
+ console.log(editableProduct)
   return (
     <div>
       <h2>Product Detail</h2>
       <div className="card w-96 bg-base-100 shadow-xl">
-        <img src={product.image} alt={product.name} className="p-8 rounded-t-lg" />
+        <img src={product?.image} alt={product.name} className="p-8 rounded-t-lg" />
         <div className="card-body">
           {isEditing ? (
             <div>
@@ -110,93 +110,3 @@ const ProductDetailPage = () => {
 };
 
 export default ProductDetailPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
-// import axios from 'axios';
-
-// const ProductDetailPage = () => {
-//   const { id } = useParams();
-//   const [product, setProduct] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     if (!id) {
-//       setError('Invalid product ID');
-//       setLoading(false);
-//       return;
-//     }
-
-//     axios.get(`http://localhost:3001/clothingItems/${id}`)
-//       .then((response) => {
-//         setProduct(response.data);
-//         setLoading(false);
-//       })
-//       .catch((error) => {
-//         setError('Error fetching data');
-//         setLoading(false);
-//       });
-//   }, [id]);
-
-//   if (loading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error: {error}</div>;
-//   }
-
-//   if (!product) {
-//     return <div>No product found</div>;
-//   }
-
-//   return (
-//     <div>
-//       <h2>Product Detail</h2>
-//       <div className="card w-96 bg-base-100 shadow-xl">
-//         <img src={product.image} alt={product.name} className="p-8 rounded-t-lg" />
-//         <div className="card-body">
-//           <p className="card-title">{product.name}</p>
-//           <p className="card-description">{product.description}</p>
-//           <p className="text-gray-600">${product.price}</p>
-//           {/* Diğer detaylar */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductDetailPage;
-
-////product sayfasına geri dönebilme

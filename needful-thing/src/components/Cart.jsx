@@ -12,8 +12,7 @@ import deletes from '../assets/icons/delete.svg';
 const CartItems = () => {
   const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
-  // const [isCart, setIsCart] = useState(false);
-  
+ 
 
   useEffect(() => {
     const fetchData = async () => {

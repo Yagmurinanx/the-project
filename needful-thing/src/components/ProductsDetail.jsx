@@ -64,8 +64,7 @@ const ProductDetailPage = () => {
   }
  console.log(editableProduct)
   return (
-    <div>
-      <h2>Product Detail</h2>
+    <div className='mt-5 mb-5 flex items-center justify-center '>
       <div className="card w-96 bg-base-100 shadow-xl">
         <img src={product?.image} alt={product.name} className="p-8 rounded-t-lg" />
         <div className="card-body">
@@ -76,18 +75,21 @@ const ProductDetailPage = () => {
                 name="name"
                 value={editableProduct.name}
                 onChange={handleInputChange}
+                className="mb-3 input input-bordered input w-full max-w-xs" 
               />
               <input
                 type="text"
                 name="description"
                 value={editableProduct.description}
                 onChange={handleInputChange}
+                className="mb-3 input input-bordered w-full max-w-xs"
               />
               <input
                 type="number"
                 name="price"
                 value={editableProduct.price}
                 onChange={handleInputChange}
+                className="mb-3 input input-bordered w-full max-w-xs"
               />
               <button className="btn btn-ghost" onClick={handleSave}>Save</button>
             </div>
@@ -95,14 +97,16 @@ const ProductDetailPage = () => {
             <div>
               <p className="card-title">{product.name}</p>
               <p className="card-description">{product.description}</p>
-              <p className="text-gray-600">${product.price}</p>
+              <p className="mt-3 mb-3 text-gray-600">${product.price}</p>
               <button className="btn btn-ghost" onClick={handleEdit}>Update</button>
+              <button>
+              <Link to="/product" className="btn btn-ghost">Go Back</Link>
+              </button>
             </div>
           )}
+           
         </div>
-        <button>
-              <Link to="/product" className="btn btn-ghost">Go Back</Link>
-              </button> 
+        
       </div>
                  
     </div>

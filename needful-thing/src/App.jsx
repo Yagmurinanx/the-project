@@ -10,7 +10,7 @@ import Products from './pages/Products';
 import ProductDetailPage from './components/ProductsDetail';
 import Footer from './components/Footer';
 import AddProduct from './pages/AddProduct';
-
+import LoginPage from './pages/LoginPage';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -22,7 +22,7 @@ root.render(
   </>
 
 );
-/////////buradaki document kısmını çıkaredım
+/////////buradaki document kısmını çıkardım
 function App() {
 
   return (
@@ -36,6 +36,7 @@ function App() {
         <Route path="/favoritesPage" element={<FavoritesPage />} />
         <Route path="/:id" element={<ProductDetailPage />} />
         <Route path="/addProduct" element={<AddProduct />} />
+        <Route path="/Login" element={<LoginPage/>}/>
       </Routes>
      </Router>
     <Footer/>

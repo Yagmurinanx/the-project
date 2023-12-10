@@ -30,9 +30,6 @@ const FavoritesPage = () => {
     return favorites.some((favorite) => favorite.id === item.id);
   };
 
-  const handleRemoveFavorite = (favoriteId) => {
-    dispatch(removeFavoriteAsync(favoriteId));
-  };
 
   const handleAddToCart = (favorite) => {
     dispatch(addToCartAsync(favorite)); // addToCartAsync'i tetikleyen işlev
@@ -40,7 +37,7 @@ const FavoritesPage = () => {
 
   return (
   
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="flex flex-wrap justify-center gap-4 mt-5 mb-5">
     {loading ? (
          <CartItemSkeleton count={9} /> ) :
       favorites.length > 0 ? (
@@ -62,7 +59,7 @@ const FavoritesPage = () => {
 
               <button
                   onClick={() => handleAddToCart(favorite)} 
-                  className="btn "
+                  className="btn"
                 >
                    <img src={cartIcon} alt='svg cart'/>
                 </button>

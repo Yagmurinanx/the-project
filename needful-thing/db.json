@@ -10,6 +10,7 @@
       "size": "Small",
       "condition": "Antique",
       "price": 59.99,
+      "quantity": 1,
       "image": "src/assets/images/product-1.jpg"
     },
     {
@@ -22,6 +23,7 @@
       "size": "Small",
       "condition": "Haunted",
       "price": 79.99,
+      "quantity": 1,
       "image": "src/assets/images/antique-doll.jpg"
     },
     {
@@ -34,6 +36,7 @@
       "size": "Compact",
       "condition": "Cursed",
       "price": 29.99,
+      "quantity": 1,
       "image": "src/assets/images/pocket-watch.jpg"
     },
     {
@@ -46,6 +49,7 @@
       "size": "Small",
       "condition": "Refurbished",
       "price": 129.99,
+      "quantity": 1,
       "image": "src/assets/images/product-mirror.jpg"
     },
     {
@@ -58,6 +62,7 @@
       "size": "Standard",
       "condition": "New",
       "price": 39.99,
+      "quantity": 1,
       "image": "src/assets/images/tarot-cards.jpg"
     },
     {
@@ -70,6 +75,7 @@
       "size": "Various",
       "condition": "Everlasting",
       "price": 29.99,
+      "quantity": 1,
       "image": "src/assets/images/unfanding-flowers.jpg"
     },
     {
@@ -82,6 +88,7 @@
       "size": "Medium",
       "condition": "Artisanal",
       "price": 49.99,
+      "quantity": 1,
       "image": "src/assets/images/skull.jpg"
     },
     {
@@ -94,6 +101,7 @@
       "size": "Standard",
       "condition": "Whimsical",
       "price": 59.99,
+      "quantity": 1,
       "image": "src/assets/images/rabbit-hole-teacup.jpg"
     },
     {
@@ -106,6 +114,7 @@
       "size": "Standard",
       "condition": "Antique",
       "price": 89.99,
+      "quantity": 1,
       "image": "src/assets/images/vintage-briefcase.jpg"
     },
     {
@@ -118,6 +127,7 @@
       "size": "Standard",
       "condition": "Vintage",
       "price": "33.99",
+      "quantity": 1,
       "image": "src/assets/images/candlestick.jpg"
     },
     {
@@ -130,6 +140,7 @@
       "size": "Standard",
       "condition": "Modern",
       "price": 79.99,
+      "quantity": 1,
       "image": "src/assets/images/green-lamp.jpg"
     },
     {
@@ -142,9 +153,24 @@
       "size": "Standard",
       "condition": "New",
       "price": 59.99,
+      "quantity": 1,
       "image": "src/assets/images/desk.jpg"
     }
   ],
   "cartItems": [],
-  "favorites": []
+  "favorites": [
+    {
+      "id": 1,
+      "name": "Crimson Enigma",
+      "description": "A mystical, crimson-hued antique television set that appears straight out of a Stephen King novel, evoking an inexplicable air of mystery and intrigue.",
+      "category": "Electronics",
+      "material": "Vintage Wood",
+      "color": "Red",
+      "size": "Small",
+      "condition": "Antique",
+      "price": 59.99,
+      "quantity": 1,
+      "image": "src/assets/images/product-1.jpg"
+    }
+  ]
 }

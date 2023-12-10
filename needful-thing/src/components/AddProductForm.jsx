@@ -37,13 +37,15 @@ const AddProductForm = () => {
   };
 
   return (
+    <div>
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
+      
     >
       {({ isSubmitting }) => (
-        <Form className='max-w-md mx-auto flex flex-col h-screen justify-between'>
+        <Form className='mt-6 max-w-md mx-auto flex flex-col h-screen justify-between'>
         <div className='my-4'>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name of the product:</label>
           <Field className="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm" type="text" name="name" />
@@ -69,11 +71,12 @@ const AddProductForm = () => {
           <Field className="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm" type="text" name="image" />
           <ErrorMessage name="image" component="div" className="text-red-500 text-sm mt-1" />
         </div>
-        <button className='inline-block px-4 py-2 mt-4 font-semibold text-white transition duration-300 ease-in-out transform bg-gradient-to-br from-purple-600 to-blue-500 rounded-md hover:from-purple-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500' type="submit" disabled={isSubmitting}>Add Product</button>
+        <button className='btn btn-info inline-block px-4 py-2 mt-4 ' type="submit" disabled={isSubmitting}>Add Product</button>
         <div className="flex-grow"></div>
       </Form>
       )}
     </Formik>
+    </div>
   );
 };
 

@@ -34,7 +34,7 @@ const Products = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-5">
+    <div className="flex flex-wrap justify-center gap-4 mt-5 mb-5">
     {loading ? (
          <CartItemSkeleton count={9} /> ) :
       products.length > 0 ? (
@@ -60,7 +60,7 @@ const Products = () => {
                 >
                    <img src={cartIcon} alt='svg cart'/>
                 </button>
-                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline btn-accent">
+                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost-error ">
                   View Details
                 </Link>
                 </div>

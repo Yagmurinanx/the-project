@@ -8,7 +8,7 @@ const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
 
-  // Yup validation schema
+ 
   const validationSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().required('Password is required'),
@@ -23,7 +23,7 @@ const LoginPage = () => {
     const { email, password } = values;
 
     if (isLogin) {
-      // Perform login
+     
       const storedUser = JSON.parse(localStorage.getItem('user'));
       if (storedUser && storedUser.email === email && storedUser.password === password) {
         navigate('/product');
@@ -34,7 +34,7 @@ const LoginPage = () => {
         setError('Invalid email or password');
       }
     } else {
-      // Register a new user
+   
       const userData = { email, password };
       localStorage.setItem('user', JSON.stringify(userData));
 

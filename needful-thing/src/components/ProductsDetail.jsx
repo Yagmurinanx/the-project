@@ -19,7 +19,7 @@ const ProductDetailPage = () => {
       return;
     }
 
-    axios.get(`http://localhost:3001/clothingItems/${id}`)
+    axios.get(`http://localhost:3001/Items/${id}`)
       .then((response) => {
         setProduct(response.data);
         setEditableProduct(response.data);
@@ -36,10 +36,10 @@ const ProductDetailPage = () => {
   };
 
   const handleSave = () => {
-    axios.put(`http://localhost:3001/clothingItems/${id}`, editableProduct) // Send updated data to the server
+    axios.put(`http://localhost:3001/Items/${id}`, editableProduct)
       .then((response) => {
-        setProduct(response.data); // Update product data in the component
-        setIsEditing(false); // Turn off editing mode
+        setProduct(response.data); 
+        setIsEditing(false); 
       })
       .catch((error) => {
         setError('Error updating data');

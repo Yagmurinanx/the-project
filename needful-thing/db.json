@@ -1,5 +1,5 @@
 {
-  "clothingItems": [
+  "Items": [
     {
       "id": 1,
       "name": "Crimson Enigma",
@@ -61,7 +61,7 @@
       "color": "Cardstock",
       "size": "Standard",
       "condition": "New",
-      "price": 39.99,
+      "price": "41.99",
       "quantity": 1,
       "image": "src/assets/images/tarot-cards.jpg"
     },
@@ -158,19 +158,5 @@
     }
   ],
   "cartItems": [],
-  "favorites": [
-    {
-      "id": 1,
-      "name": "Crimson Enigma",
-      "description": "A mystical, crimson-hued antique television set that appears straight out of a Stephen King novel, evoking an inexplicable air of mystery and intrigue.",
-      "category": "Electronics",
-      "material": "Vintage Wood",
-      "color": "Red",
-      "size": "Small",
-      "condition": "Antique",
-      "price": 59.99,
-      "quantity": 1,
-      "image": "src/assets/images/product-1.jpg"
-    }
-  ]
+  "favorites": []
 }

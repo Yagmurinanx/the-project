@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import searchIcon from '../assets/icons/search.svg';
 import { debounce } from 'lodash';
+import '../index.css';
+
+
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +14,7 @@ const Navbar = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/clothingItems')
+    axios.get('http://localhost:3001/Items')
       .then(response => {
         setProducts(response.data);
       })
@@ -20,7 +23,7 @@ const Navbar = () => {
       });
   }, []);
 
-  // Debounce the handleSearch function to delay search execution
+
   const delayedSearch = debounce(() => {
     setIsSearching(true);
 
@@ -37,22 +40,22 @@ const Navbar = () => {
 
     setSearchResults(results);
     setIsSearching(false);
-  }, 300); // Adjust the debounce time as needed
+  }, 300); 
 
   const handleSearch = () => {
-    delayedSearch(); // Trigger the delayed search function
+    delayedSearch(); 
   };
 
   useEffect(() => {
-    delayedSearch(); // Trigger the delayed search when searchTerm changes
-    return delayedSearch.cancel; // Cleanup debounce on component unmount
+    delayedSearch();
+    return delayedSearch.cancel; 
   }, [searchTerm, delayedSearch]);
 
   return (
     <div className="bg-black">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
-          <Link to="/" className="text-2xl font-bold text-white hover:text-gray-300">Needful Things</Link>
+          <Link to="/" className="text-2xl  text-white hover:text-gray-300">Needful Things</Link>
           <ul className="flex items-center space-x-4">
           <li>
               <Link to="/" className="text-white hover:text-gray-300">Home</Link>

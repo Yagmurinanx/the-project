@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Features/productSlice';
+import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Redux/productSlice';
 import CartItemSkeleton from '../components/CartItemSkeleton';
 import cartIcon from '../assets/icons/cart.svg'
 import favoriteIcon from '../assets/icons/favorite-empty.svg'

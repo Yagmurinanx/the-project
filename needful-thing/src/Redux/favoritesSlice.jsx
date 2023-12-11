@@ -13,12 +13,13 @@ export const addToCartAsync = createAsyncThunk('cart/addToCart', async (favorite
   const isItemInCart = cartItems.some(item => item.id === favorite.id);
   
   if (!isItemInCart) {
-    // Cart'ta olmayan bir favori ürünü ekleyin
-    const response = await axios.post('http://localhost:3001/cartItems', favorite); // favorite yerine favorite'nin tamamını geçin
+ 
+    const response = await axios.post('http://localhost:3001/cartItems', favorite); 
+    
     return response.data;
   } else {
     console.log('This item already exists in cartItems.');
-    return null; // Eğer öğe zaten cartItems içinde bulunuyorsa, null dönebiliriz veya istediğiniz bir değeri dönebilirsiniz.
+    return null; 
   }
 });
 
@@ -39,7 +40,7 @@ export const favoriteSlice = createSlice({
   name: "favorites",
   initialState: {
     favorites: [],
-    cartItems: [], // cartItems dizisini ekleyin
+    cartItems: [], 
     isLoading: false,
     error: null,
   },
@@ -94,4 +95,3 @@ export const favoriteSlice = createSlice({
 export const { setFavorites, addFavorite, removeFavorite } = favoriteSlice.actions;
 
 export default favoriteSlice.reducer;
-///neden sadece id olarak ekliyor burada kaldım

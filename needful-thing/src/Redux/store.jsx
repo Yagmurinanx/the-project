@@ -1,8 +1,8 @@
 import { configureStore, createSlice, getDefaultMiddleware } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk'; 
-import { addToCart } from './action';
-import favoriteReducer from '../Features/favoritesSlice';
-import productsReducer from '../Features/productSlice'
+import { addToCart } from './cartAction';
+import favoriteReducer from './favoritesSlice';
+import productsReducer from './productSlice'
 
 
 const initialState = {
@@ -31,7 +31,6 @@ export const cartReducer = (state = initialState, action) => {
 const store = configureStore({
   reducer: {
     favorites: favoriteReducer,
-    // clothing: clothingSlice.reducer,
     cart: cartReducer,
     products: productsReducer,
    

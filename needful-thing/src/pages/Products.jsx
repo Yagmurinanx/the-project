@@ -60,7 +60,7 @@ const Products = () => {
                 >
                    <img src={cartIcon} alt='svg cart'/>
                 </button>
-                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost-error ">
+                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn btn-outline btn-info ">
                   View Details
                 </Link>
                 </div>

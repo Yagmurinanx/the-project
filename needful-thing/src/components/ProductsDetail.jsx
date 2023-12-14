@@ -91,7 +91,7 @@ const ProductDetailPage = () => {
                 onChange={handleInputChange}
                 className="mb-3 input input-bordered w-full max-w-xs"
               />
-              <button className="btn btn-ghost" onClick={handleSave}>Save</button>
+              <button className="btn btn-outline btn-info" onClick={handleSave}>Save</button>
             </div>
           ) : (
             <div>
@@ -100,7 +100,7 @@ const ProductDetailPage = () => {
               <p className="mt-3 mb-3 text-gray-600">${product.price}</p>
               <button className="btn btn-ghost" onClick={handleEdit}>Update</button>
               <button>
-              <Link to="/product" className="btn btn-ghost">Go Back</Link>
+              <Link to="/product" className="btn btn-outline btn-info">Go Back</Link>
               </button>
             </div>
           )}

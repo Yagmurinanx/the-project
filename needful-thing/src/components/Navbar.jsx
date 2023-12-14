@@ -63,7 +63,7 @@ const Navbar = () => {
             <li>
               <Link to="/product" className="text-white hover:text-gray-300">Products</Link>
             </li>
-
+            
             <li className="relative flex items-center space-x-0">
               <input
                 type="text"

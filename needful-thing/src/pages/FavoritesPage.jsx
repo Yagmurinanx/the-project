@@ -32,7 +32,7 @@ const FavoritesPage = () => {
 
 
   const handleAddToCart = (favorite) => {
-    dispatch(addToCartAsync(favorite)); // addToCartAsync'i tetikleyen işlev
+    dispatch(addToCartAsync(favorite));
   };
 
   return (

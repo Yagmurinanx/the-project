@@ -82,11 +82,15 @@ export const productSlice = createSlice({
       })
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         const newItem = action.payload;
-        const isItemInCart = state.cartItems.find(item => item.id === newItem.id);
-        if (!isItemInCart) {
-          state.cartItems.push(newItem);
+        if (newItem && newItem.id) {
+          const isItemInCart = state.cartItems.find(item => item.id === newItem.id);
+          if (!isItemInCart) {
+            state.cartItems.push(newItem);
+          } else {
+            console.log('This item is already in cartItems.');
+          }
         } else {
-          console.log('This item is already in cartItems.');
+          console.error('Invalid or missing id in the newItem:', newItem);
         }
       })
       .addCase(addToFavoritesAsync.fulfilled, (state, action) => {

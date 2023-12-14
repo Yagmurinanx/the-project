@@ -11,7 +11,7 @@
       "condition": "Antique",
       "price": 59.99,
       "quantity": 1,
-      "image": "src/assets/images/product-1.jpg"
+      "image": "https://i.ibb.co/9Gvk1rR/product-1.jpg"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
       "condition": "Haunted",
       "price": 79.99,
       "quantity": 1,
-      "image": "src/assets/images/antique-doll.jpg"
+      "image": "https://i.ibb.co/VT9rBKX/antique-doll.jpg"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "condition": "Cursed",
       "price": 29.99,
       "quantity": 1,
-      "image": "src/assets/images/pocket-watch.jpg"
+      "image": "https://i.ibb.co/HKx1Pjh/pocket-watch.jpg"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
       "condition": "Refurbished",
       "price": 129.99,
       "quantity": 1,
-      "image": "src/assets/images/product-mirror.jpg"
+      "image": "https://i.ibb.co/Sc3Bmxw/product-mirror.jpg"
     },
     {
       "id": 5,
@@ -63,7 +63,7 @@
       "condition": "New",
       "price": "41.99",
       "quantity": 1,
-      "image": "src/assets/images/tarot-cards.jpg"
+      "image": "https://i.ibb.co/1JH8ZJd/tarot-cards.jpg"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
       "condition": "Everlasting",
       "price": 29.99,
       "quantity": 1,
-      "image": "src/assets/images/unfanding-flowers.jpg"
+      "image": "https://i.ibb.co/9cWvKvz/unfanding-flowers.jpg"
     },
     {
       "id": 7,
@@ -89,7 +89,7 @@
       "condition": "Artisanal",
       "price": 49.99,
       "quantity": 1,
-      "image": "src/assets/images/skull.jpg"
+      "image": "https://i.ibb.co/9s2xkM8/skull.jpg"
     },
     {
       "id": 8,
@@ -102,7 +102,7 @@
       "condition": "Whimsical",
       "price": 59.99,
       "quantity": 1,
-      "image": "src/assets/images/rabbit-hole-teacup.jpg"
+      "image": "https://i.ibb.co/wL3kNcR/rabbit-hole-teacup.jpg"
     },
     {
       "id": 9,
@@ -115,7 +115,7 @@
       "condition": "Antique",
       "price": 89.99,
       "quantity": 1,
-      "image": "src/assets/images/vintage-briefcase.jpg"
+      "image": "https://i.ibb.co/c2kFZWp/vintage-briefcase.jpg"
     },
     {
       "id": 10,
@@ -128,7 +128,7 @@
       "condition": "Vintage",
       "price": "33.99",
       "quantity": 1,
-      "image": "src/assets/images/candlestick.jpg"
+      "image": "https://i.ibb.co/KsXQSTT/candlestick.jpg"
     },
     {
       "id": 11,
@@ -141,7 +141,7 @@
       "condition": "Modern",
       "price": 79.99,
       "quantity": 1,
-      "image": "src/assets/images/green-lamp.jpg"
+      "image": "https://i.ibb.co/MfqFNCH/green-lamp.jpg"
     },
     {
       "id": 12,
@@ -154,8 +154,9 @@
       "condition": "New",
       "price": 59.99,
       "quantity": 1,
-      "image": "src/assets/images/desk.jpg"
+      "image": "https://i.ibb.co/KV3gTLV/desk.jpg"
     }
+  
   ],
   "cartItems": [],
   "favorites": []

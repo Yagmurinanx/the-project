@@ -6,6 +6,9 @@ import { fetchCart } from '../Redux/cartAction';
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  
+  const handleIncrease=( )=>{ }
+
 
   useEffect(() => {
     async function fetchCartItems() {
@@ -24,7 +27,7 @@ const CartPage = () => {
     }
 
     fetchCartItems();
-  }, []);
+  }, [handleIncrease]);
 
 
 
@@ -32,11 +35,11 @@ const CartPage = () => {
     <div className='relative'>
     <h1 className="text-center text-2xl font-bold mb-4 mt-4">CART</h1> 
     <div className="flex justify-center">
-      <Cart />
+      <Cart actionUpdate={handleIncrease}/>
     </div>
     <div className="flex justify-center mt-4  rounded-lg p-4">
       <div className="bg-gray-100 p-4 rounded-lg">
-        <p className="text-lg font-semibold">Total Price: ${totalPrice} <button className="btn btn-outline btn-info">Order Now</button>
+        <p className="text-lg font-semibold">Total Price: ${totalPrice?.toFixed(2)} <button className="btn btn-outline btn-info">Order Now</button>
         </p>
         
       </div>

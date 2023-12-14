@@ -113,7 +113,7 @@
       "color": "Brown",
       "size": "Standard",
       "condition": "Antique",
-      "price": 89.99,
+      "price": "90",
       "quantity": 1,
       "image": "https://i.ibb.co/c2kFZWp/vintage-briefcase.jpg"
     },
@@ -156,8 +156,8 @@
       "quantity": 1,
       "image": "https://i.ibb.co/KV3gTLV/desk.jpg"
     }
-  
   ],
   "cartItems": [],
-  "favorites": []
+  "favorites": [
+  ]
 }

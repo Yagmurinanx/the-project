@@ -19,7 +19,7 @@ const ProductDetailPage = () => {
       return;
     }
 
-    axios.get(`http://localhost:3001/clothingItems/${id}`)
+    axios.get(`http://localhost:3001/Items/${id}`)
       .then((response) => {
         setProduct(response.data);
         setEditableProduct(response.data);
@@ -36,10 +36,10 @@ const ProductDetailPage = () => {
   };
 
   const handleSave = () => {
-    axios.put(`http://localhost:3001/clothingItems/${id}`, editableProduct) // Send updated data to the server
+    axios.put(`http://localhost:3001/Items/${id}`, editableProduct)
       .then((response) => {
-        setProduct(response.data); // Update product data in the component
-        setIsEditing(false); // Turn off editing mode
+        setProduct(response.data); 
+        setIsEditing(false); 
       })
       .catch((error) => {
         setError('Error updating data');
@@ -91,7 +91,7 @@ const ProductDetailPage = () => {
                 onChange={handleInputChange}
                 className="mb-3 input input-bordered w-full max-w-xs"
               />
-              <button className="btn btn-ghost" onClick={handleSave}>Save</button>
+              <button className="btn btn-outline btn-info" onClick={handleSave}>Save</button>
             </div>
           ) : (
             <div>
@@ -100,7 +100,7 @@ const ProductDetailPage = () => {
               <p className="mt-3 mb-3 text-gray-600">${product.price}</p>
               <button className="btn btn-ghost" onClick={handleEdit}>Update</button>
               <button>
-              <Link to="/product" className="btn btn-ghost">Go Back</Link>
+              <Link to="/product" className="btn btn-outline btn-info">Go Back</Link>
               </button>
             </div>
           )}

@@ -22,14 +22,14 @@ const AddProductForm = () => {
   });
 
   const handleSubmit = (values, { setSubmitting }) => {
-    axios.post('http://localhost:3001/clothingItems', values)
+    axios.post('http://localhost:3001/Items', values)
       .then((response) => {
         console.log('Product added:', response.data);
-        // İşlem başarılı olduğunda kullanıcıya bilgi verilebilir veya farklı bir işlem yapılabilir
+      
       })
       .catch((error) => {
         console.error('An error occurred while adding the product:', error);
-        // Hata durumunda kullanıcıya bir hata mesajı gösterilebilir
+        
       })
       .finally(() => {
         setSubmitting(false);

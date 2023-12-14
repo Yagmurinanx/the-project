@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Features/productSlice';
+import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Redux/productSlice';
 import CartItemSkeleton from '../components/CartItemSkeleton';
 import cartIcon from '../assets/icons/cart.svg'
 import favoriteIcon from '../assets/icons/favorite-empty.svg'
@@ -60,7 +60,7 @@ const Products = () => {
                 >
                    <img src={cartIcon} alt='svg cart'/>
                 </button>
-                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost-error ">
+                <Link to={`/${product.id}`} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn btn-outline btn-info ">
                   View Details
                 </Link>
                 </div>

@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         black: '#171212',
-        green: '#1eb854' // Özel rengi tanımlama
+        green: '#1eb854', 
+        white: '#F5F5F5'
       },
     },
   },

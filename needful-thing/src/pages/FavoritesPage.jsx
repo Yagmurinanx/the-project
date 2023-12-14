@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFavorites, addFavoriteAsync, removeFavoriteAsync ,addToCartAsync } from '../Features/favoritesSlice';
+import { fetchFavorites, addFavoriteAsync, removeFavoriteAsync ,addToCartAsync } from '../Redux/favoritesSlice';
 import CartItemSkeleton from '../components/CartItemSkeleton';
 import heartBroken from '../assets/icons/heart_broken.svg'
 import favoriteIcon from '../assets/icons/favorite-empty.svg';
@@ -32,7 +32,7 @@ const FavoritesPage = () => {
 
 
   const handleAddToCart = (favorite) => {
-    dispatch(addToCartAsync(favorite)); // addToCartAsync'i tetikleyen işlev
+    dispatch(addToCartAsync(favorite));
   };
 
   return (

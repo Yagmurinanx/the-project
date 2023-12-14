@@ -8,9 +8,10 @@ import deletes from '../assets/icons/delete.svg';
 
 
 
-const CartItems = () => {
+const CartItems = ({actionUpdate}) => {
   const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
+ 
 
 
   useEffect(() => {
@@ -65,8 +66,9 @@ const CartItems = () => {
       const updatedItem = {
         ...item,
         quantity: Math.max(1, updatedQuantity)
-      };
 
+      };
+      actionUpdate();
      
       const updatedDataForAPI = {
         id: selectedItem.id,

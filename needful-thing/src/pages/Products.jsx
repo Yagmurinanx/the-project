@@ -5,6 +5,9 @@ import { fetchProducts, addToCartAsync, addToFavoritesAsync } from '../Redux/pro
 import CartItemSkeleton from '../components/CartItemSkeleton';
 import cartIcon from '../assets/icons/cart.svg'
 import favoriteIcon from '../assets/icons/favorite-empty.svg'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -23,10 +26,30 @@ const Products = () => {
 
   const handleAddToCart = (product) => {
     dispatch(addToCartAsync(product));
+    toast('Product added to cart', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   }; 
 
   const handleAddToFavorites = (product) => {
     dispatch(addToFavoritesAsync(product));
+    toast('Product added to favorites', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
    
   }; 
   const toggleForm = () => {

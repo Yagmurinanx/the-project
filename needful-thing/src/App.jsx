@@ -1,5 +1,8 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Navbar from './components/Navbar';
 import store from './Redux/store';
 import { createRoot } from 'react-dom/client';
@@ -22,9 +25,9 @@ root.render(
   </>
 
 );
-/////////buradaki document kısmını çıkardım
-function App() {
 
+
+function App() {
   return (
     <div>
     <Router>
@@ -39,8 +42,8 @@ function App() {
         <Route path="/Login" element={<LoginPage/>}/>
       </Routes>
      </Router>
-     
     <Footer/>
+    <ToastContainer />
   </div>
   )
 }

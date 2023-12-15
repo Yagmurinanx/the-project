@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -40,9 +42,20 @@ const ProductDetailPage = () => {
       .then((response) => {
         setProduct(response.data); 
         setIsEditing(false); 
+        toast('Product information updated', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((error) => {
         setError('Error updating data');
+        toast.error('Error updating data');
       });
   };
 

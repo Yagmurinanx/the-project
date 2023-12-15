@@ -4,7 +4,8 @@ import { sendToFavorites, deleteFromCart, fetchCart, updateCartItem} from '../Re
 import CartItemSkeleton from '../components/CartItemSkeleton';
 import favorite from '../assets/icons/favorite-empty.svg';
 import deletes from '../assets/icons/delete.svg';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -37,6 +38,17 @@ const CartItems = ({actionUpdate}) => {
     try {
       await dispatch(sendToFavorites(selectedItems));
       console.log('Item added to Favorites:', selectedItems);
+      toast('Product added to favorites', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+     
 
     } catch (error) {
       console.error('Error adding item to Favorites:', error);
@@ -57,7 +69,7 @@ const CartItems = ({actionUpdate}) => {
     }
   };
 
-//yenilenmeden
+
 
  const handleQuantityChange = async (selectedItem, action) => {
   const updatedCartItems = cartItems.map(item => {

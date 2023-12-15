@@ -5,6 +5,9 @@ import CartItemSkeleton from '../components/CartItemSkeleton';
 import heartBroken from '../assets/icons/heart_broken.svg'
 import favoriteIcon from '../assets/icons/favorite-empty.svg';
 import cartIcon from '../assets/icons/cart.svg'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FavoritesPage = () => {
   const dispatch = useDispatch();
@@ -21,6 +24,16 @@ const FavoritesPage = () => {
   const handleAddToFavorites = (favorites) => {
     if (isFavorite(favorites)) {
       dispatch(removeFavoriteAsync(favorites.id));
+      toast('Product removed from favorites :(', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } else {
       dispatch(addFavoriteAsync(favorites));
     }
@@ -33,6 +46,16 @@ const FavoritesPage = () => {
 
   const handleAddToCart = (favorite) => {
     dispatch(addToCartAsync(favorite));
+    toast('Product added to cart', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   };
 
   return (

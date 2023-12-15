@@ -9,7 +9,7 @@
       "color": "Red",
       "size": "Small",
       "condition": "Antique",
-      "price": 59.99,
+      "price": "70",
       "quantity": 1,
       "image": "https://i.ibb.co/9Gvk1rR/product-1.jpg"
     },
@@ -158,6 +158,5 @@
     }
   ],
   "cartItems": [],
-  "favorites": [
-  ]
+  "favorites": []
 }
